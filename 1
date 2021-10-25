@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+void Loto(int N, int k) {
+    int b = 1;
+    for (int i = 1; i < k; i++)
+        b *= 10;
+    if (N != 0) {
+        cout << N / b << endl;
+        N = N % b;
+        k--;
+        Loto(N, k);
+    }
+
+}
+int main() {
+    int N;
+    int k = 0;
+    int a;
+    cin >> N;
+    a = N;
+    while (a != 0) {
+        a /= 10;
+        k++;
+ }
+
+    Loto(N,k);
+   
+}
